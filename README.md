@@ -43,5 +43,3 @@ You can adjust **`dpi`** in `pdf_to_images(pdf_path, dpi=300)` and **`quality`**
 1. **Converting PDF to Images**: The `pdf_to_images` function opens a PDF and converts each page into an image at a specified DPI.
 2. **Inverting Image Colors**: The `invert_colors` function takes the list of images and inverts their colors to a negative.
 3. **Saving Images to PDF**: The `save_images_to_pdf` function takes the inverted images and saves them back into a single PDF document.
-
-Remember to replace `input.pdf` and `output.pdf` with the actual names of your PDF files or implement a method for users to specify their file names. Also, don't forget to include a `LICENSE` file in your repository with the open source license you choose to use.
