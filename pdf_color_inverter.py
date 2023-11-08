@@ -1,4 +1,4 @@
-import fitz  # PyMuPDF
+import fitz
 from PIL import Image, ImageOps
 from fpdf import FPDF
 import io
@@ -10,7 +10,6 @@ def pdf_to_images(pdf_path, dpi=300):
     images = []
     for page_num in range(len(doc)):
         page = doc[page_num]
-        # 设置DPI参数
         pix = page.get_pixmap(dpi=dpi, colorspace="RGB")
         img_data = pix.tobytes()
         img = Image.open(io.BytesIO(img_data))
@@ -42,7 +41,7 @@ def main(pdf_path, output_pdf_path):
     inverted_images = invert_colors(images)
     save_images_to_pdf(inverted_images, output_pdf_path)
 
-
+# Change the following paths to your input and output pdf paths
 input_pdf_path = 'path_to_your_input.pdf'
 output_pdf_path = 'path_to_your_output.pdf'
 main(input_pdf_path, output_pdf_path)
